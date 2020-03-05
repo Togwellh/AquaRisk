@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Fishing Risk Assessment</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="top">
+		</br>
+		<div id="title" class="row">
+			<div class="col" style="text-align:center;">
+				<h1>AquaRisk - Fish Farm Risk Assessment Tool</h1>
+			</div>
+		</div>
+		</br>
+		</br>
+		</div>
+		<table class="table" style="width:auto;">
+		  <thead class="thead-light">
+			<tr>
+			  <th scope="col" class="smaller"><p>Function</p></th>
+			  <th scope="col" ><p>Failure Mode</p></th>
+			  <th scope="col" colspan="2"><p>Failure Effect</p></th>
+			  <th scope="col" class="zasd"><p>Severity</p><span class="tooltiptext tt1"><h6><strong>Severity Scale</strong></h6>10. Hazardous without warning</br>9. Hazardous with warning</br>8. Very High</br>7. High</br>6. Moderate</br>5. Low</br>4. Very Low</br>3. Minor</br>2. Very Minor</br>1. None No effect</span></th>
+			  <th scope="col" ><p>Cause</p></th>
+			  <th scope="col" colspan="3"class="zasd"><p>Occurrence Rate</p><span class="tooltiptext tt2"><h6><strong>Occurrence Scale</strong></h6>10: 1 in 2</br>9: 1 in 3</br>8: 1 in 8</br>7: 1 in 20</br>6: 1 in 80</br>5: 1 in 400</br>4: 1 in 2000</br>3: 1 in 15,000</br>2: 1 in 150,000</br>1: 1 in 1,500,000</br></span></th>
+			  <th scope="col"><p>Detection Method</p></th>
+			  <th scope="col" class="zasd"><p>Detection Chance</p><span class="tooltiptext tt1"><h6><strong>Detection Chance</strong></h6>10. Absolute Uncertainty</br>9.  Very Remote</br>8.  Remote</br>7.  Very Low</br>6.  Low</br>5.  Moderate</br>4.  Moderately High</br>3.  High</br>2.  Very High</br>1.  Almost Certain</br></span></th>
+			  <th scope="col" colspan="2"><p>Controls</p></th>
+			  <th scope="col" colspan="3" class="zasd"><p>RPN</p><span class="tooltiptext tt3"><h6><strong>RPN</strong></h6>250+ : Intolerable</br>150-249 : Unacceptable</br>100-149 : Permissable</br>50-99 : Acceptable</br>0-49 : Negligible</br></span></th>
+			</tr>
+			<tr>
+			  <th>&nbsp;</td>
+			  <th>&nbsp;</td>
+			  <th scope="col">Local</th>
+			  <th scope="col">System</th>
+			  <th>&nbsp;</td>
+			  <th>&nbsp;</td>
+			  <th scope="col">20 Years</th>
+			  <th scope="col">10 Years</th>
+			  <th scope="col">5 Years</th>
+			  <th>&nbsp;</td>
+			  <th>&nbsp;</td>
+			  <th scope="col">Current</th>
+			  <th scope="col">Future</th>
+			  <th scope="col">20 Years</th>
+			  <th scope="col">10 Years</th>
+			  <th scope="col">5 Years</th>
+			</tr>
+		  </thead>
+		  <tbody id="rows">
+		  </tbody>
+		</table>
+		<div class="row">
+			<div class="col">
+			</div>
+			<div class="col">
+			</div>
+			<div class="col">
+				<button class="btn btn-primary" style="margin-left:15%; width:70%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="addOptionFunc();">Add Function Option</button>
+			</div>
+			<div class="col">
+				<button class="btn btn-primary" style="margin-left:15%; width:70%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="addOption();">Add Failure Option</button>
+			</div>
+			<div class="col">
+				<button class="btn btn-primary" style="margin-left:15%; width:70%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="addRow();">Add Row</button>
+			</div>
+			<div class="col">
+			</div>
+			<div class="col">
+			</div>
+		</div>
+		
+		<div class="container">
+			</br>
+			<div class="row">
+				<div class="col">
+					<button class="btn btn-primary" style="margin-left:35%; width:30%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="download();">Save</button>
+				</div>
+				<div class="col">
+					<button class="btn btn-primary" style="margin-left:35%; width:30%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="load();">Load</button>
+				</div>
+				<div class="col">
+					<button class="btn btn-primary" style="margin-left:35%; width:30%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="clearz();">Clear</button>
+				</div>
+			</div>
+		</div>
+		<div id="upload" style="padding:20px; display:none;">
+			</br>
+			<textarea id="textup" class="form-control"></textarea>
+			</br>
+			<button class="btn btn-primary" style="width:10%; background-color:#BAC3FF; border-color:#BAC3FF;" onclick="loadinf();">Load Information</button>
+		</div>
+		<p id="counter" style="display:none;">1</p>
+	</body>
+</html>

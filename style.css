@@ -1,0 +1,76 @@
+td {
+	width:8.5%;
+}
+
+th {
+	text-align:center;
+}
+
+.top {
+	background-color:#D1D4D6;
+	width:100%;
+}
+
+.txtsmall {
+	width:5%;
+}
+
+.txtsmall {
+	width:5%;
+}
+
+.smaller {
+	width:4%;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 2px;
+  border-radius: 6px;
+  font-size:14px;
+  margin-top:25px;
+  
+  
+  position: absolute;
+  z-index: 1;
+}
+
+.tt1 {
+	margin-left:-60px;
+	margin-top:-10px;
+}
+
+.tt2 {
+	margin-left:-60px;
+	margin-top:-10px;
+}
+
+.tt3 {
+	margin-left:-70px;
+	margin-top:-10px;
+}
+
+.zasd:hover .tooltiptext {
+  visibility: visible;
+}
+
+.zasd p {
+	text-decoration-line: underline;
+  text-decoration-style: dotted;
+  position:relative;
+}
+
+html, body {
+    max-width: 100%;
+	width:100%;
+	overflow: hidden;
+	background-color:#F4F7F9;
+}
+
+p {
+	text-align:center;
+}
